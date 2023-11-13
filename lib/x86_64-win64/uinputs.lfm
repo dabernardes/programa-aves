@@ -1,0 +1,114 @@
+object FrmInputs: TFrmInputs
+  Left = 433
+  Height = 506
+  Top = 33
+  Width = 1137
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Insumos'
+  ClientHeight = 506
+  ClientWidth = 1137
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object LblTitle: TLabel
+    Left = 0
+    Height = 31
+    Top = 0
+    Width = 1137
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Insumos'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object PnlInput2: TPanel
+    Left = 0
+    Height = 63
+    Top = 31
+    Width = 1137
+    Align = alTop
+    ClientHeight = 63
+    ClientWidth = 1137
+    TabOrder = 0
+    object DBNavInput: TDBNavigator
+      Left = 1
+      Height = 61
+      Top = 1
+      Width = 751
+      Align = alLeft
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 61
+      ClientWidth = 751
+      DataSource = DMConnect.DSInput
+      OnClick = DBNavInputClick
+      Options = []
+      TabOrder = 0
+    end
+    object SpBtnClose: TSpeedButton
+      Left = 1073
+      Height = 61
+      Top = 1
+      Width = 63
+      Align = alRight
+      Caption = 'Sair'
+      OnClick = SpBtnCloseClick
+    end
+    object SpBtnSave: TSpeedButton
+      Left = 1010
+      Height = 61
+      Top = 1
+      Width = 63
+      Align = alRight
+      Caption = 'Gravar'
+      OnClick = SpBtnSaveClick
+    end
+  end
+  object PnlInput1: TPanel
+    Left = 0
+    Height = 412
+    Top = 94
+    Width = 1137
+    Align = alClient
+    ClientHeight = 412
+    ClientWidth = 1137
+    TabOrder = 1
+    object DBGridInput: TDBGrid
+      Left = 1
+      Height = 410
+      Top = 1
+      Width = 1135
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'ID'
+          FieldName = 'ID'
+        end      
+        item
+          Title.Caption = 'Tipo'
+          FieldName = 'Tipo'
+        end      
+        item
+          Title.Caption = 'Valor'
+          FieldName = 'Valor'
+          DisplayFormat = '#0.00'
+        end>
+      DataSource = DMConnect.DSInput
+      TabOrder = 0
+      OnKeyPress = DBGridInputKeyPress
+    end
+  end
+end

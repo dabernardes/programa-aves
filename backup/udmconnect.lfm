@@ -1,0 +1,753 @@
+object DMConnect: TDMConnect
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 450
+  HorizontalOffset = 541
+  VerticalOffset = 41
+  Width = 670
+  PPI = 120
+  object ZQBirds: TZQuery
+    Connection = ZConnectbirds
+    Active = True
+    SQL.Strings = (
+      'Select * from Users'
+    )
+    Params = <>
+    DataSource = DSusers
+    Left = 24
+    Top = 112
+  end
+  object ZConnectbirds: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'hostname'
+    Port = 0
+    Database = 'xe'
+    User = 'dbernardes'
+    Password = 'A12345b'
+    Protocol = 'oracle'
+    Left = 24
+    Top = 8
+  end
+  object RxUsers: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Nome'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'CPF'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Email'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'Senha'
+        DataType = ftString
+        Precision = -1
+        Size = 50
+      end    
+      item
+        Name = 'Status'
+        DataType = ftString
+        Precision = -1
+      end>
+    PacketRecords = 0
+    Left = 24
+    Top = 200
+    object RxUsersID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxUsersNome: TStringField
+      FieldKind = fkData
+      FieldName = 'Nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object RxUsersCPF: TStringField
+      FieldKind = fkData
+      FieldName = 'CPF'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxUsersEmail: TStringField
+      FieldKind = fkData
+      FieldName = 'Email'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object RxUsersSenha: TStringField
+      FieldKind = fkData
+      FieldName = 'Senha'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object RxUsersStatus: TStringField
+      FieldKind = fkData
+      FieldName = 'Status'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 0
+    end
+  end
+  object DSusers: TDataSource
+    DataSet = RxUsers
+    Left = 24
+    Top = 296
+  end
+  object DSBirds: TDataSource
+    DataSet = RxBirds
+    Left = 104
+    Top = 296
+  end
+  object RxBirds: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Tipo'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    PacketRecords = 0
+    Left = 104
+    Top = 200
+    object RxBirdsID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxBirdsTipo: TStringField
+      FieldKind = fkData
+      FieldName = 'Tipo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object DSFarms: TDataSource
+    DataSet = RxFarms
+    Left = 184
+    Top = 296
+  end
+  object RxFarms: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Nome_Granja'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Localizacao'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Capacidade'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    PacketRecords = 0
+    Left = 184
+    Top = 200
+    object RxFarmsID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxFarmsNome_Granja: TStringField
+      FieldKind = fkData
+      FieldName = 'Nome_Granja'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxFarmsLocalizacao: TStringField
+      FieldKind = fkData
+      FieldName = 'Localizacao'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxFarmsCapacidade: TLongintField
+      FieldKind = fkData
+      FieldName = 'Capacidade'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object RxAviary: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Nome_Aviário'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Capacidade'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Granja'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    PacketRecords = 0
+    Left = 264
+    Top = 200
+    object RxAviaryID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxAviaryNome_Avirio: TStringField
+      FieldKind = fkData
+      FieldName = 'Nome_Aviário'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxAviaryCapacidade: TLongintField
+      FieldKind = fkData
+      FieldName = 'Capacidade'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxAviaryGranja: TStringField
+      FieldKind = fkData
+      FieldName = 'Granja'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object DSAviary: TDataSource
+    DataSet = RxAviary
+    Left = 264
+    Top = 296
+  end
+  object RxInput: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Tipo'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Valor'
+        DataType = ftFloat
+        Precision = 2
+      end>
+    PacketRecords = 0
+    Left = 336
+    Top = 200
+    object RxInputID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxInputTipo: TStringField
+      FieldKind = fkData
+      FieldName = 'Tipo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxInputValor: TFloatField
+      FieldKind = fkData
+      FieldName = 'Valor'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#0.00'
+      Precision = 2
+    end
+  end
+  object DSInput: TDataSource
+    DataSet = RxInput
+    Left = 336
+    Top = 296
+  end
+  object RxLot: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Data_entrada'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'Quantidade'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Aviario'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Ave'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Peso (Medio)'
+        DataType = ftFloat
+        Precision = 2
+      end    
+      item
+        Name = 'Peso (Total)'
+        DataType = ftFloat
+        Precision = 2
+      end>
+    PacketRecords = 0
+    Left = 400
+    Top = 200
+    object RxLotID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxLotData_entrada: TDateField
+      FieldKind = fkData
+      FieldName = 'Data_entrada'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxLotQuantidade: TLongintField
+      FieldKind = fkData
+      FieldName = 'Quantidade'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxLotAviario: TStringField
+      FieldKind = fkData
+      FieldName = 'Aviario'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxLotAve: TStringField
+      FieldKind = fkData
+      FieldName = 'Ave'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxLotPesoMedio: TFloatField
+      FieldKind = fkData
+      FieldName = 'Peso (Medio)'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#0.000'
+      Precision = 2
+    end
+    object RxLotPesoTotal: TFloatField
+      FieldKind = fkData
+      FieldName = 'Peso (Total)'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#0.000'
+      Precision = 2
+    end
+  end
+  object DSLot: TDataSource
+    DataSet = RxLot
+    Left = 400
+    Top = 296
+  end
+  object DSTimeLine: TDataSource
+    DataSet = RxTimeline
+    Left = 552
+    Top = 296
+  end
+  object RxTimeline: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Tipo_Movimento'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'NumeroLote'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Qnt_Lote'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Data'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'Ave'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Granja'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Aviario'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Mortality'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Valor'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Peso'
+        DataType = ftFloat
+        Precision = 2
+      end    
+      item
+        Name = 'Insumo'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'Qnt_Insumo'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Status'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    PacketRecords = 0
+    Left = 552
+    Top = 200
+    object RxTimelineID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineTipo_Movimento: TStringField
+      FieldKind = fkData
+      FieldName = 'Tipo_Movimento'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineNumeroLote: TLongintField
+      FieldKind = fkData
+      FieldName = 'NumeroLote'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineQnt_Lote: TLongintField
+      FieldKind = fkData
+      FieldName = 'Qnt_Lote'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineData: TDateField
+      FieldKind = fkData
+      FieldName = 'Data'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineAve: TStringField
+      FieldKind = fkData
+      FieldName = 'Ave'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineGranja: TStringField
+      FieldKind = fkData
+      FieldName = 'Granja'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineAviario: TStringField
+      FieldKind = fkData
+      FieldName = 'Aviario'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineMortality: TLongintField
+      FieldKind = fkData
+      FieldName = 'Mortality'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineValor: TStringField
+      FieldKind = fkData
+      FieldName = 'Valor'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelinePeso: TFloatField
+      FieldKind = fkData
+      FieldName = 'Peso'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 2
+    end
+    object RxTimelineInsumo: TStringField
+      FieldKind = fkData
+      FieldName = 'Insumo'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineQnt_Insumo: TLongintField
+      FieldKind = fkData
+      FieldName = 'Qnt_Insumo'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxTimelineStatus: TStringField
+      FieldKind = fkData
+      FieldName = 'Status'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object RxActivity: TRxMemoryData
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Tipo'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end>
+    PacketRecords = 0
+    Left = 472
+    Top = 200
+    object RxActivityID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object RxActivityTipo: TStringField
+      FieldKind = fkData
+      FieldName = 'Tipo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object DSActivity: TDataSource
+    DataSet = RxActivity
+    Left = 472
+    Top = 296
+  end
+end

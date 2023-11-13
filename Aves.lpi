@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="Aves"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="frce"/>
+      </Item>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
+      <Item>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="rxnew"/>
+      </Item>
+      <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="Aves.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMain"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udmconnect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMConnect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDMConnect"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLogin"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uadduser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAddUser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAddUser"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ubirds.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmBirds"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uBirds"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ufarm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFarm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFarm"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uaviary.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAviary"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAviary"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uinputs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmInputs"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uInputs"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ulot.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLot"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLot"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utimeline.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmTimeline"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTimeline"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uactivity.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmActivity"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uActivity"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uclose.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Frmclose"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uClose"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urels1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRel1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Urels1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatorio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelatorio"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelatorio"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urel2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRel2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatorio2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelatorio2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatiorio3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelatorio3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelatiorio3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urel3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRel3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRel3"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="Aves"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+      <Item>
+        <Name Value="EZSQLException"/>
+      </Item>
+      <Item>
+        <Name Value="EVariantError"/>
+      </Item>
+      <Item>
+        <Name Value="EDatabaseError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

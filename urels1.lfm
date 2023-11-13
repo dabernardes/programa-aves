@@ -1,0 +1,87 @@
+object FrmRel1: TFrmRel1
+  Left = 437
+  Height = 513
+  Top = 33
+  Width = 1184
+  BorderIcons = []
+  BorderStyle = bsNone
+  ClientHeight = 513
+  ClientWidth = 1184
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 328
+    Height = 28
+    Top = 272
+    Width = 125
+    KeyField = 'LOTID'
+    ListField = 'LOTID'
+    ListFieldIndex = 0
+    ListSource = DTComboBox
+    LookupCache = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 496
+    Height = 31
+    Top = 269
+    Width = 94
+    Caption = 'Gerar'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 31
+    Top = 0
+    Width = 1184
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Relatório de Historico de Lotes fechados'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button2: TButton
+    Left = 942
+    Height = 31
+    Top = 439
+    Width = 94
+    Caption = 'Close'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object ZQcombobox: TZQuery
+    Connection = DMConnect.ZConnectbirds
+    SQL.Strings = (
+      'select * from lots where status = ''FECHADO'''
+    )
+    Params = <>
+    Left = 8
+    Top = 8
+  end
+  object DTComboBox: TDataSource
+    DataSet = ZQcombobox
+    Left = 120
+    Top = 8
+  end
+  object ZQrel1: TZQuery
+    Connection = DMConnect.ZConnectbirds
+    SQL.Strings = (
+      'Select * from Historic order by lotid'
+    )
+    Params = <>
+    Left = 872
+    Top = 16
+  end
+  object DSRel1: TDataSource
+    DataSet = ZQrel1
+    Left = 944
+    Top = 16
+  end
+end

@@ -1,0 +1,89 @@
+object FrmMain: TFrmMain
+  Left = -9
+  Height = 544
+  Top = -9
+  Width = 1041
+  Caption = 'Principal'
+  ClientHeight = 515
+  ClientWidth = 1041
+  DesignTimePPI = 120
+  Menu = MMenu
+  WindowState = wsFullScreen
+  object PnlMain: TPanel
+    Left = 0
+    Height = 452
+    Top = 0
+    Width = 1041
+    Align = alClient
+    TabOrder = 0
+  end
+  object PnlInf: TPanel
+    Left = 0
+    Height = 63
+    Top = 452
+    Width = 1041
+    Align = alBottom
+    TabOrder = 1
+  end
+  object MMenu: TMainMenu
+    Left = 32
+    Top = 8
+    object MICadastro: TMenuItem
+      Caption = 'Cadastro'
+      object MIAddUser: TMenuItem
+        Caption = 'Usuários'
+        OnClick = MIAddUserClick
+      end
+      object MILots: TMenuItem
+        Caption = 'Aves'
+        OnClick = MILotsClick
+      end
+      object MItmGranjas: TMenuItem
+        Caption = 'Granjas'
+        OnClick = MItmGranjasClick
+      end
+      object MIAviary: TMenuItem
+        Caption = 'Aviários'
+        OnClick = MIAviaryClick
+      end
+      object MenuItem1: TMenuItem
+        Caption = 'Lotes'
+        OnClick = MenuItem1Click
+      end
+      object MIIsumos: TMenuItem
+        Caption = 'Insumos'
+        OnClick = MIIsumosClick
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Movimento'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Manutenção'
+      object MenuItem3: TMenuItem
+        Caption = 'Inserir Movimento'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Fechar Lote'
+        OnClick = MenuItem5Click
+      end
+    end
+    object MIRels: TMenuItem
+      Caption = 'Relatórios'
+      object MenuItem6: TMenuItem
+        Caption = 'Lotes Fechados'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Gastos'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Mortalidade'
+        OnClick = MenuItem8Click
+      end
+    end
+  end
+end

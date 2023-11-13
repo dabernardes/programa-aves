@@ -1,0 +1,86 @@
+object FrmRelatorio3: TFrmRelatorio3
+  Left = 437
+  Height = 508
+  Top = 33
+  Width = 1195
+  Caption = 'Relatorio 3'
+  ClientHeight = 508
+  ClientWidth = 1195
+  DesignTimePPI = 120
+  object RLReport1: TRLReport
+    Left = 141
+    Height = 1403
+    Top = 103
+    Width = 992
+    Font.Color = clBlack
+    Font.Height = -17
+    Font.Name = 'Arial'
+    object RLBand1: TRLBand
+      Left = 47
+      Height = 20
+      Top = 47
+      Width = 898
+      BandType = btHeader
+    end
+    object RLBand2: TRLBand
+      Left = 47
+      Height = 60
+      Top = 67
+      Width = 898
+      BandType = btTitle
+      Color = clInactiveCaption
+      ParentColor = False
+      Transparent = False
+      object RLLabel1: TRLLabel
+        Left = 279
+        Height = 37
+        Top = 11
+        Width = 339
+        Align = faCenter
+        Caption = 'Relatorio de Mortalidade'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Segoe UI Black'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+      end
+    end
+    object RLGroup1: TRLGroup
+      Left = 47
+      Height = 208
+      Top = 127
+      Width = 898
+      object RLBand3: TRLBand
+        Left = 0
+        Height = 56
+        Top = 0
+        Width = 898
+        BandType = btHeader
+      end
+      object RLBand4: TRLBand
+        Left = 0
+        Height = 68
+        Top = 56
+        Width = 898
+      end
+      object RLBand5: TRLBand
+        Left = 0
+        Height = 20
+        Top = 124
+        Width = 898
+        BandType = btFooter
+      end
+    end
+    object RLBand6: TRLBand
+      Left = 47
+      Height = 20
+      Top = 335
+      Width = 898
+      BandType = btFooter
+    end
+  end
+end

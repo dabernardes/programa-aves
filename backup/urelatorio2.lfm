@@ -1,0 +1,360 @@
+object Form1: TForm1
+  Left = 437
+  Height = 584
+  Top = 33
+  Width = 1186
+  Caption = 'Form1'
+  ClientHeight = 584
+  ClientWidth = 1186
+  DesignTimePPI = 120
+  object RLReport1: TRLReport
+    Left = 147
+    Height = 1403
+    Top = 83
+    Width = 992
+    DataSource = FrmRel2.DataSource2
+    Font.Color = clBlack
+    Font.Height = -17
+    Font.Name = 'Arial'
+    object RLBand1: TRLBand
+      Left = 47
+      Height = 64
+      Top = 47
+      Width = 898
+      BandType = btTitle
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = True
+      Borders.DrawTop = True
+      Borders.DrawRight = True
+      Borders.DrawBottom = True
+      Borders.Width = 5
+      object RLLabel1: TRLLabel
+        Left = 306
+        Height = 32
+        Top = 16
+        Width = 286
+        Align = faCenter
+        Alignment = taCenter
+        Caption = 'Relatorio de despesas'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -23
+        Font.Name = 'Arial Black'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object RLGroup1: TRLGroup
+      Left = 47
+      Height = 304
+      Top = 111
+      Width = 898
+      DataFields = 'LOTID_FK'
+      object RLBand2: TRLBand
+        Left = 0
+        Height = 88
+        Top = 0
+        Width = 898
+        BandType = btHeader
+        object RLPanel1: TRLPanel
+          Left = 0
+          Height = 48
+          Top = 0
+          Width = 898
+          Align = faTop
+          object RLDBText1: TRLDBText
+            Left = 168
+            Height = 26
+            Top = 0
+            Width = 103
+            DataField = 'LOTID_FK'
+            DataSource = FrmRel2.DataSource2
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlue
+            Font.Height = -18
+            Font.Name = 'Arial Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object RLLabel2: TRLLabel
+            Left = 2
+            Height = 26
+            Top = 0
+            Width = 163
+            Caption = 'Numero do lote:'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlue
+            Font.Height = -18
+            Font.Name = 'Arial Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+        end
+        object RLPanel2: TRLPanel
+          Left = 0
+          Height = 40
+          Top = 48
+          Width = 898
+          Align = faClient
+          object RLLabel3: TRLLabel
+            Left = 0
+            Height = 40
+            Top = 0
+            Width = 280
+            Align = faLeft
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 5
+            Caption = 'Tipo'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -20
+            Font.Name = 'Segoe UI Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object RLLabel4: TRLLabel
+            Left = 280
+            Height = 40
+            Top = 0
+            Width = 288
+            Align = faLeft
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 5
+            Caption = 'Valor'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -20
+            Font.Name = 'Segoe UI Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object RLLabel5: TRLLabel
+            Left = 568
+            Height = 40
+            Top = 0
+            Width = 330
+            Align = faClient
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 5
+            Caption = 'Data'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -20
+            Font.Name = 'Segoe UI Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+        end
+      end
+      object RLBand3: TRLBand
+        Left = 0
+        Height = 32
+        Top = 88
+        Width = 898
+        object RLPanel3: TRLPanel
+          Left = 0
+          Height = 32
+          Top = 0
+          Width = 898
+          Align = faClient
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = True
+          Borders.DrawTop = True
+          Borders.DrawRight = True
+          Borders.DrawBottom = True
+          Borders.Width = 2
+          object RLDBText2: TRLDBText
+            Left = 2
+            Height = 28
+            Top = 2
+            Width = 280
+            Align = faLeft
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 2
+            Color = clSkyBlue
+            DataField = 'INPUTTYPE'
+            DataSource = FrmRel2.DataSource2
+            ParentColor = False
+            Transparent = False
+          end
+          object RLDBText3: TRLDBText
+            Left = 282
+            Height = 28
+            Top = 2
+            Width = 288
+            Align = faClient
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 2
+            DataField = 'TIMELINEVALUE'
+            DataSource = FrmRel2.DataSource2
+          end
+          object RLDBText4: TRLDBText
+            Left = 570
+            Height = 28
+            Top = 2
+            Width = 326
+            Align = faRight
+            Alignment = taCenter
+            AutoSize = False
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
+            Borders.Width = 2
+            DataField = 'TIMELINEDATE'
+            DataSource = FrmRel2.DataSource2
+          end
+        end
+      end
+      object RLBand4: TRLBand
+        Left = 0
+        Height = 40
+        Top = 120
+        Width = 898
+        BandType = btFooter
+        object RLPanel4: TRLPanel
+          Left = 0
+          Height = 24
+          Top = 16
+          Width = 898
+          Align = faBottom
+          Color = clMedGray
+          ParentColor = False
+          Transparent = False
+          object RLDBResult1: TRLDBResult
+            Left = 261
+            Height = 24
+            Top = 0
+            Width = 337
+            DataField = 'TIMELINEVALUE'
+            DataSource = FrmRel2.DataSource2
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -17
+            Font.Name = 'Arial Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            Info = riSum
+            ParentFont = False
+            Transparent = False
+          end
+          object RLLabel6: TRLLabel
+            Left = 0
+            Height = 24
+            Top = 0
+            Width = 245
+            Align = faLeft
+            AutoSize = False
+            Caption = 'Valor Total gasto :'
+            Font.CharSet = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -17
+            Font.Name = 'Arial Black'
+            Font.Pitch = fpVariable
+            Font.Quality = fqDraft
+            Font.Style = [fsBold]
+            ParentFont = False
+            Transparent = False
+          end
+        end
+      end
+    end
+    object RLBand5: TRLBand
+      Left = 47
+      Height = 32
+      Top = 415
+      Width = 898
+      BandType = btFooter
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = True
+      Borders.DrawTop = True
+      Borders.DrawRight = True
+      Borders.DrawBottom = True
+      Borders.Width = 3
+      Color = clMoneyGreen
+      ParentColor = False
+      Transparent = False
+      object RLLabel8: TRLLabel
+        Left = 3
+        Height = 26
+        Top = 3
+        Width = 269
+        Align = faLeft
+        AutoSize = False
+        Caption = 'Valor Total gasto :'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial Black'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+      end
+      object RLDBResult2: TRLDBResult
+        Left = 272
+        Height = 26
+        Top = 3
+        Width = 220
+        Align = faLeft
+        DataField = 'TIMELINEVALUE'
+        DataSource = FrmRel2.DataSource2
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial Black'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        Info = riSum
+        ParentFont = False
+        Transparent = False
+      end
+    end
+  end
+end

@@ -1,0 +1,162 @@
+object FrmLot: TFrmLot
+  Left = 433
+  Height = 506
+  Top = 33
+  Width = 1171
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Lotes'
+  ClientHeight = 506
+  ClientWidth = 1171
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  object LblTitle: TLabel
+    Left = 0
+    Height = 31
+    Top = 0
+    Width = 1171
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Lotes'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object PnlLot1: TPanel
+    Left = 0
+    Height = 63
+    Top = 31
+    Width = 1171
+    Align = alTop
+    ClientHeight = 63
+    ClientWidth = 1171
+    TabOrder = 0
+    object DBNavLot: TDBNavigator
+      Left = 1
+      Height = 61
+      Top = 1
+      Width = 767
+      Align = alLeft
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 61
+      ClientWidth = 767
+      DataSource = DMConnect.DSLot
+      OnClick = DBNavLotClick
+      Options = []
+      TabOrder = 0
+    end
+    object SpBtnSave: TSpeedButton
+      Left = 1044
+      Height = 61
+      Top = 1
+      Width = 63
+      Align = alRight
+      Caption = 'Gravar'
+      OnClick = SpBtnSaveClick
+    end
+    object SpBtnClose: TSpeedButton
+      Left = 1107
+      Height = 61
+      Top = 1
+      Width = 63
+      Align = alRight
+      Caption = 'Sair'
+      OnClick = SpBtnCloseClick
+    end
+  end
+  object Pnllot2: TPanel
+    Left = 0
+    Height = 412
+    Top = 94
+    Width = 1171
+    Align = alClient
+    Caption = 'Pnllot2'
+    ClientHeight = 412
+    ClientWidth = 1171
+    TabOrder = 1
+    object DBGridlot: TDBGrid
+      Left = 1
+      Height = 410
+      Top = 1
+      Width = 1169
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          ReadOnly = True
+          Title.Caption = 'ID'
+          FieldName = 'ID'
+        end      
+        item
+          Title.Caption = 'Data_entrada'
+          Width = 104
+          FieldName = 'Data_entrada'
+        end      
+        item
+          Title.Caption = 'Quantidade'
+          FieldName = 'Quantidade'
+        end      
+        item
+          Title.Caption = 'Aviario'
+          FieldName = 'Aviario'
+        end      
+        item
+          Title.Caption = 'Ave'
+          FieldName = 'Ave'
+        end      
+        item
+          Title.Caption = 'Peso (Medio)'
+          FieldName = 'Peso (Medio)'
+          DisplayFormat = '#0.000'
+        end      
+        item
+          Title.Caption = 'Peso (Total)'
+          FieldName = 'Peso (Total)'
+          DisplayFormat = '#0.000'
+        end>
+      DataSource = DMConnect.DSLot
+      DefaultRowHeight = 26
+      TabOrder = 0
+      OnCellClick = DBGridlotCellClick
+      OnColExit = DBGridlotColExit
+      OnDrawColumnCell = DBGridlotDrawColumnCell
+      OnKeyPress = DBGridlotKeyPress
+    end
+    object DateTimePicker1: TDateTimePicker
+      Left = 1024
+      Height = 28
+      Top = 88
+      Width = 105
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 1
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Visible = False
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 45185
+      Time = 0.957848680554889
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+      OnChange = DateTimePicker1Change
+      OnExit = DateTimePicker1Exit
+    end
+  end
+end
